@@ -720,4 +720,18 @@ if (userCount.count === 0) {
   console.log('✅ The Foundation Room database seeded successfully.');
 }
 
+// ── Ensure additional instructor account exists (idempotent on every startup) ──
+{
+  const hellodevHash = bcrypt.hashSync('password123', 10);
+  db.prepare(`
+    INSERT OR IGNORE INTO users (email, password_hash, first_name, last_name, role, instrument, avatar_initials, bio, verified)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+  `).run(
+    'hellodev@gmail.com', hellodevHash, 'Hello', 'Dev',
+    'instructor', 'General', 'HD',
+    'Instructor account for development and testing.',
+    1
+  );
+}
+
 module.exports = db;

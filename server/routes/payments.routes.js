@@ -18,14 +18,14 @@ try {
 // GET /api/payments/course/:course_id/price
 router.get('/course/:course_id/price', (req, res) => {
   try {
-    const course = db.prepare('SELECT id, title, price_paise, is_paid, currency FROM courses WHERE id = ?').get(req.params.course_id);
+    const course = db.prepare('SELECT id, title, price_paise, is_paid FROM courses WHERE id = ?').get(req.params.course_id);
     if (!course) return res.status(404).json({ error: 'Course not found' });
     res.json({
       course_id: course.id,
       title: course.title,
       price_paise: course.price_paise || 0,
       is_paid: course.is_paid || 0,
-      currency: course.currency || 'INR'
+      currency: 'INR'
     });
   } catch (err) {
     res.status(500).json({ error: err.message });

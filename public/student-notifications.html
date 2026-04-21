@@ -81,51 +81,7 @@
 <body>
 <div class="shell">
   <!-- Sidebar -->
-  <aside class="sidebar" id="sidebar">
-    <div class="sidebar-brand">
-      <div class="brand-title">The Archive</div>
-      <div class="brand-sub" id="sb-portal">Student Portal</div>
-    </div>
-    <nav class="sidebar-nav">
-      <a href="/student-dashboard.html" class="nav-item" id="nav-dashboard">
-        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>
-        Dashboard
-      </a>
-      <a href="/course-catalog.html" class="nav-item">
-        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-        My Courses
-      </a>
-      <a href="/gradebook.html" class="nav-item">
-        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-        Gradebook
-      </a>
-      <a href="/messaging.html" class="nav-item">
-        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-        Messages
-      </a>
-      <a href="/notifications.html" class="nav-item active">
-        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-        Notifications
-      </a>
-      <a href="/student-profile.html" class="nav-item">
-        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-        Profile
-      </a>
-      <a href="/sheet-music.html" class="nav-item">
-        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-        Sheet Music
-      </a>
-    </nav>
-    <div class="sidebar-footer">
-      <div class="sidebar-user" onclick="handleLogout()">
-        <div class="sidebar-avatar" id="sb-avatar">—</div>
-        <div class="sidebar-user-info">
-          <div class="user-name" id="sb-name">Loading…</div>
-          <div class="user-role" id="sb-role">student</div>
-        </div>
-      </div>
-    </div>
-  </aside>
+  <aside class="sidebar" id="sidebar"></aside>
 
   <!-- Main -->
   <div class="main-wrap">
@@ -133,7 +89,7 @@
       <div class="topbar-title">Notifications</div>
       <div class="topbar-actions">
         <button class="icon-btn" onclick="markAllRead()" title="Mark all read" style="width:auto;border-radius:var(--radius);padding:8px 14px;font-size:12px;font-weight:600;color:var(--gold);">Mark all read</button>
-        <div class="topbar-avatar" id="topbar-avatar">—</div>
+        <a href="/student-profile.html" class="topbar-avatar" id="topbar-avatar" title="Profile">—</a>
       </div>
     </header>
 
@@ -161,6 +117,8 @@
 
 <script src="/assets/js/api.js"></script>
 <script src="/assets/js/auth-guard.js"></script>
+<script>requireRole(['student']);</script>
+<script src="/assets/js/student-sidebar.js"></script>
 <script>
   let allNotifications = [];
   let activeFilter = 'all';

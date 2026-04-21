@@ -71,7 +71,7 @@
         <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>
         Dashboard
       </a>
-      <a href="/course-catalog.html" class="nav-item">
+      <a href="/student-course-catalog.html" class="nav-item">
         <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
         Course Manager
       </a>
@@ -79,11 +79,11 @@
         <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
         Gradebook
       </a>
-      <a href="/archive-browse.html" class="nav-item">
+      <a href="/student-archive.html" class="nav-item">
         <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
         Live Classes
       </a>
-      <a href="/announcements.html" class="nav-item">
+      <a href="/student-announcements.html" class="nav-item">
         <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
         Announcements
       </a>
@@ -502,7 +502,7 @@
       await api.post('/api/courses', body);
       document.getElementById('create-course-modal').style.display = 'none';
       toast('Course created successfully!');
-      setTimeout(() => window.location.href = '/course-catalog.html', 1200);
+      setTimeout(() => window.location.href = '/student-course-catalog.html', 1200);
     } catch (err) {
       errEl.textContent = err.message;
       errEl.style.display = 'block';

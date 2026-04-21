@@ -387,6 +387,7 @@ img { display: block; max-width: 100%; }
   color: var(--text-2);
   transition: background var(--transition), color var(--transition);
   position: relative;
+  text-decoration: none;
 }
 
 .icon-btn:hover { background: var(--bg-elevated); color: var(--gold); }
@@ -417,6 +418,7 @@ img { display: block; max-width: 100%; }
   cursor: pointer;
   flex-shrink: 0;
   letter-spacing: 0.02em;
+  text-decoration: none;
 }
 
 /* ─── Main Content ─── */

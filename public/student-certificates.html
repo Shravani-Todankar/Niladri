@@ -120,69 +120,16 @@
 </head>
 <body>
 <div class="shell">
-  <aside class="sidebar" id="sidebar">
-    <div class="sidebar-brand">
-      <div class="brand-title">The Archive</div>
-      <div class="brand-sub">Music School</div>
-    </div>
-    <nav class="sidebar-nav">
-      <a href="/student-dashboard.html" class="nav-item" id="nav-dashboard">
-        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>
-        Dashboard
-      </a>
-      <a href="/course-catalog.html" class="nav-item">
-        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-        Library
-      </a>
-      <a href="/my-lessons.html" class="nav-item">
-        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
-        My Lessons
-      </a>
-      <a href="/live-classes.html" class="nav-item">
-        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
-        Live Classes
-      </a>
-      <a href="/certificates.html" class="nav-item active">
-        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
-        Certificates
-      </a>
-      <a href="/payments.html" class="nav-item">
-        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
-        Payments
-      </a>
-      <a href="/announcements.html" class="nav-item">
-        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-        Announcements
-      </a>
-      <a href="/resource-library.html" class="nav-item">
-        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        Resources
-      </a>
-      <a href="/sheet-music.html" class="nav-item">
-        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-        Sheet Music
-      </a>
-      <a href="/archive-browse.html" class="nav-item">
-        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="21 8 21 21 3 21 3 8"/><rect x="1" y="3" width="22" height="5"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
-        Archive
-      </a>
-    </nav>
-    <div class="sidebar-footer">
-      <div class="sidebar-user" onclick="handleLogout()">
-        <div class="sidebar-avatar" id="sb-avatar">—</div>
-        <div class="sidebar-user-info">
-          <div class="user-name" id="sb-name">Loading…</div>
-          <div class="user-role">Student</div>
-        </div>
-      </div>
-    </div>
-  </aside>
+  <aside class="sidebar" id="sidebar"></aside>
 
   <div class="main-wrap">
     <header class="topbar">
       <div class="topbar-title">My Certificates</div>
       <div class="topbar-actions">
-        <div class="topbar-avatar" id="topbar-avatar">—</div>
+        <a href="/student-notifications.html" class="icon-btn" title="Notifications">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+        </a>
+        <a href="/student-profile.html" class="topbar-avatar" id="topbar-avatar" title="Profile">—</a>
       </div>
     </header>
 
@@ -227,6 +174,7 @@
 <script src="/assets/js/api.js"></script>
 <script src="/assets/js/auth-guard.js"></script>
 <script>requireRole(['student']);</script>
+<script src="/assets/js/student-sidebar.js"></script>
 <script>
   let currentCertId = null;
   let currentCertNumber = null;
@@ -280,7 +228,7 @@
           </svg>
           <div class="empty-title">No certificates yet.</div>
           <p class="empty-sub">Complete a course to earn your first certificate from The Archive Music School.</p>
-          <a href="/course-catalog.html" class="btn btn-primary" style="display:inline-flex;margin-top:16px;text-decoration:none;">Browse Courses →</a>
+          <a href="/student-course-catalog.html" class="btn btn-primary" style="display:inline-flex;margin-top:16px;text-decoration:none;">Browse Courses →</a>
         </div>`;
       return;
     }
@@ -359,7 +307,7 @@
 
   function shareCert() {
     if (!currentCertId) return;
-    const link = `${window.location.origin}/certificates.html?cert=${currentCertId}`;
+    const link = `${window.location.origin}/student-certificates.html?cert=${currentCertId}`;
     navigator.clipboard.writeText(link).then(() => {
       toast('Certificate link copied to clipboard!', 'success');
     }).catch(() => {

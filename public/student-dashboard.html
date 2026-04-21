@@ -89,58 +89,7 @@
 <body>
 <div class="shell">
   <!-- Sidebar -->
-  <aside class="sidebar" id="sidebar">
-    <div class="sidebar-brand">
-      <div class="brand-monogram">TFR</div>
-      <div class="brand-title">The Foundation Room</div>
-      <div class="brand-sub">Student Portal</div>
-    </div>
-
-    <nav class="sidebar-nav">
-      <a href="/student-dashboard.html" class="nav-item active">
-        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>
-        Dashboard
-      </a>
-      <a href="/course-catalog.html" class="nav-item">
-        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-        My Courses
-      </a>
-      <a href="/gradebook.html" class="nav-item">
-        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-        Gradebook
-      </a>
-      <a href="/practice-log.html" class="nav-item">
-        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        Practice Log
-      </a>
-      <a href="/calendar.html" class="nav-item">
-        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-        Calendar
-      </a>
-      <a href="/archive-browse.html" class="nav-item">
-        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
-        Live Classes
-      </a>
-      <a href="/messages.html" class="nav-item">
-        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-        Messages
-      </a>
-      <a href="/course-catalog.html" class="nav-item">
-        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        Search
-      </a>
-    </nav>
-
-    <div class="sidebar-footer">
-      <div class="sidebar-user" onclick="handleLogout()">
-        <div class="sidebar-avatar" id="sb-avatar">--</div>
-        <div class="sidebar-user-info">
-          <div class="user-name" id="sb-name">Student</div>
-          <div class="user-role">Student</div>
-        </div>
-      </div>
-    </div>
-  </aside>
+  <aside class="sidebar" id="sidebar"></aside>
 
   <!-- Main -->
   <div class="main-wrap">
@@ -151,14 +100,14 @@
         <input type="text" placeholder="Search courses, instructors…" id="topbar-search-input">
       </div>
       <div class="topbar-actions">
-        <button class="icon-btn" title="Notifications">
+        <a href="/student-notifications.html" class="icon-btn" title="Notifications">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
           <span class="badge-dot"></span>
-        </button>
-        <button class="icon-btn" title="Settings">
+        </a>
+        <a href="/student-profile.html" class="icon-btn" title="Settings">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
-        </button>
-        <div class="topbar-avatar" id="topbar-avatar">--</div>
+        </a>
+        <a href="/student-profile.html" class="topbar-avatar" id="topbar-avatar" title="Profile">--</a>
       </div>
     </header>
 
@@ -172,8 +121,8 @@
           <div style="font-size:14px; color:var(--text-2); margin-bottom:4px;">Your practice streak: <strong style="color:var(--gold);" id="streak-count">14 days</strong> 🔥</div>
           <div style="font-size:13px; color:var(--text-3);" id="welcome-sub">Today's focus: Keep learning and growing.</div>
           <div style="display:flex; gap:10px; margin-top:18px; flex-wrap:wrap;">
-            <a href="/my-lessons.html" class="btn btn-primary">Resume Session</a>
-            <a href="/practice-log.html" class="btn btn-outline">View Goals</a>
+            <a href="/student-lessons.html" class="btn btn-primary">Resume Session</a>
+            <a href="/student-practice-log.html" class="btn btn-outline">View Goals</a>
           </div>
         </div>
         <!-- Decorative geometry -->
@@ -230,7 +179,7 @@
           <!-- Currently Practicing -->
           <div class="section-header mb-16">
             <div class="section-title">Currently Practicing</div>
-            <a href="/course-catalog.html" class="link-gold">View All →</a>
+            <a href="/student-course-catalog.html" class="link-gold">View All →</a>
           </div>
           <div id="enrollments-grid" style="margin-bottom:28px;">
             <div class="skeleton" style="height:110px; margin-bottom:14px;"></div>
@@ -240,7 +189,7 @@
           <!-- Upcoming Live Classes -->
           <div class="section-header mb-16">
             <div class="section-title">Live Classes</div>
-            <a href="/archive-browse.html" class="link-gold">View All →</a>
+            <a href="/student-archive.html" class="link-gold">View All →</a>
           </div>
           <div id="masterclasses-list">
             <div class="skeleton" style="height:72px; margin-bottom:10px;"></div>
@@ -279,6 +228,7 @@
 <script src="/assets/js/api.js"></script>
 <script src="/assets/js/auth-guard.js"></script>
 <script>requireRole(['student']);</script>
+<script src="/assets/js/student-sidebar.js"></script>
 <script>
   gsap.registerPlugin(ScrollTrigger);
 
@@ -399,7 +349,7 @@
       // Animate progress bars after DOM settles
       setTimeout(animateProgressBars, 200);
     } catch (e) {
-      document.getElementById('enrollments-grid').innerHTML = '<div class="card"><div class="empty-state"><div class="empty-icon">📚</div><h3>No courses yet</h3><p>Browse the catalog to enroll in your first course.</p><a href="/course-catalog.html" class="btn btn-primary" style="margin-top:14px; display:inline-flex;">Browse Catalog</a></div></div>';
+      document.getElementById('enrollments-grid').innerHTML = '<div class="card"><div class="empty-state"><div class="empty-icon">📚</div><h3>No courses yet</h3><p>Browse the catalog to enroll in your first course.</p><a href="/student-course-catalog.html" class="btn btn-primary" style="margin-top:14px; display:inline-flex;">Browse Catalog</a></div></div>';
     }
 
     // Load masterclasses
@@ -433,11 +383,11 @@
   function renderEnrollments(enrollments) {
     const container = document.getElementById('enrollments-grid');
     if (!enrollments.length) {
-      container.innerHTML = `<div class="card"><div class="empty-state"><div class="empty-icon">📚</div><h3>No courses yet</h3><p>Browse the catalog to enroll in your first course.</p><a href="/course-catalog.html" class="btn btn-primary" style="margin-top:14px; display:inline-flex;">Browse Catalog</a></div></div>`;
+      container.innerHTML = `<div class="card"><div class="empty-state"><div class="empty-icon">📚</div><h3>No courses yet</h3><p>Browse the catalog to enroll in your first course.</p><a href="/student-course-catalog.html" class="btn btn-primary" style="margin-top:14px; display:inline-flex;">Browse Catalog</a></div></div>`;
       return;
     }
     container.innerHTML = enrollments.slice(0, 3).map(e => `
-      <a href="/course-detail.html?id=${e.course_id}" class="course-card-link">
+      <a href="/student-course-detail.html?id=${e.course_id}" class="course-card-link">
         <div class="course-card-h">
           <div class="course-swatch-inner" style="background:${instructorGradient(e.instructor_name)};">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(200,168,75,0.40)" stroke-width="1.5"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
@@ -545,7 +495,7 @@
   // Search redirect
   document.getElementById('topbar-search-input').addEventListener('keydown', (e) => {
     if (e.key === 'Enter' && e.target.value) {
-      window.location.href = `/course-catalog.html?search=${encodeURIComponent(e.target.value)}`;
+      window.location.href = `/student-course-catalog.html?search=${encodeURIComponent(e.target.value)}`;
     }
   });
 </script>

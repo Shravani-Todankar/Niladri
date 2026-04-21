@@ -343,15 +343,13 @@
 
   document.addEventListener('userLoaded', (e) => {
     currentUser = e.detail;
-    document.getElementById('sb-avatar').textContent = currentUser.avatar_initials || (currentUser.first_name[0] + currentUser.last_name[0]);
-    document.getElementById('sb-name').textContent = currentUser.first_name + ' ' + currentUser.last_name;
-    document.getElementById('sb-role').textContent = currentUser.role === 'instructor' ? 'Instructor' : 'Student';
     document.getElementById('topbar-avatar').textContent = currentUser.avatar_initials || (currentUser.first_name[0] + currentUser.last_name[0]);
-    document.getElementById('nav-dashboard').href = currentUser.role === 'instructor' ? '/instructor-dashboard.html' : '/student-dashboard.html';
 
     if (['instructor', 'admin', 'teaching_assistant'].includes(currentUser.role)) {
-      document.getElementById('upload-btn-top').style.display = '';
-      document.getElementById('upload-btn-main').style.display = '';
+      const btnTop = document.getElementById('upload-btn-top');
+      const btnMain = document.getElementById('upload-btn-main');
+      if (btnTop) btnTop.style.display = '';
+      if (btnMain) btnMain.style.display = '';
       loadCoursesForSelect();
     }
     loadResources();

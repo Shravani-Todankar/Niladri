@@ -241,14 +241,7 @@
   document.addEventListener('userLoaded', (e) => {
     const user = e.detail;
     const initials = user.avatar_initials || (user.first_name[0] + user.last_name[0]);
-    document.getElementById('sb-avatar').textContent = initials;
     document.getElementById('topbar-avatar').textContent = initials;
-    document.getElementById('sb-name').textContent = `${user.first_name} ${user.last_name}`;
-    document.getElementById('sb-role').textContent = user.role;
-    if (user.role === 'instructor') {
-      document.getElementById('sb-portal').textContent = 'Instructor Portal';
-      document.getElementById('nav-dashboard').href = '/instructor-dashboard.html';
-    }
     loadNotifications();
     setInterval(loadNotifications, 30000);
   });

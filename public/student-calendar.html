@@ -349,7 +349,13 @@
             <!-- Calendar views -->
             <div id="cal-view-month">
               <div class="cal-month-header">
-                ${['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].map(d => `<div class="cal-month-dayname">${d}</div>`).join('')}
+                <div class="cal-month-dayname">Sun</div>
+                <div class="cal-month-dayname">Mon</div>
+                <div class="cal-month-dayname">Tue</div>
+                <div class="cal-month-dayname">Wed</div>
+                <div class="cal-month-dayname">Thu</div>
+                <div class="cal-month-dayname">Fri</div>
+                <div class="cal-month-dayname">Sat</div>
               </div>
               <div class="cal-month-grid" id="cal-month-grid"></div>
             </div>
@@ -377,7 +383,13 @@
                 </button>
               </div>
               <div class="mini-cal-grid">
-                ${['S','M','T','W','T','F','S'].map(d => `<div class="mini-cal-dayname">${d}</div>`).join('')}
+                <div class="mini-cal-dayname">S</div>
+                <div class="mini-cal-dayname">M</div>
+                <div class="mini-cal-dayname">T</div>
+                <div class="mini-cal-dayname">W</div>
+                <div class="mini-cal-dayname">T</div>
+                <div class="mini-cal-dayname">F</div>
+                <div class="mini-cal-dayname">S</div>
               </div>
               <div class="mini-cal-grid" id="mini-cal-grid"></div>
             </div>
@@ -432,9 +444,12 @@
         <div class="form-group">
           <label class="form-label">Color</label>
           <div style="display:flex; gap:8px; padding-top:4px;" id="color-swatches">
-            ${['#C8A84B','#2D4F1E','#8B2E26','#1A3050','#5A3E8B','#2D7D9A'].map((c, i) =>
-              `<div class="color-swatch${i===0?' selected':''}" style="background:${c};" data-color="${c}" onclick="selectColor(this)"></div>`
-            ).join('')}
+            <div class="color-swatch selected" style="background:#C8A84B;" data-color="#C8A84B" onclick="selectColor(this)"></div>
+            <div class="color-swatch" style="background:#2D4F1E;" data-color="#2D4F1E" onclick="selectColor(this)"></div>
+            <div class="color-swatch" style="background:#8B2E26;" data-color="#8B2E26" onclick="selectColor(this)"></div>
+            <div class="color-swatch" style="background:#1A3050;" data-color="#1A3050" onclick="selectColor(this)"></div>
+            <div class="color-swatch" style="background:#5A3E8B;" data-color="#5A3E8B" onclick="selectColor(this)"></div>
+            <div class="color-swatch" style="background:#2D7D9A;" data-color="#2D7D9A" onclick="selectColor(this)"></div>
           </div>
         </div>
       </div>
@@ -507,9 +522,8 @@
 
   document.addEventListener('userLoaded', (e) => {
     const user = e.detail;
-    document.getElementById('sb-avatar').textContent = user.avatar_initials || (user.first_name[0] + user.last_name[0]);
-    document.getElementById('sb-name').textContent = user.first_name + ' ' + user.last_name;
-    document.getElementById('topbar-avatar').textContent = user.avatar_initials || (user.first_name[0] + user.last_name[0]);
+    const initials = user.avatar_initials || ((user.first_name || '')[0] + (user.last_name || '')[0]);
+    document.getElementById('topbar-avatar').textContent = initials;
     loadCalendar();
     loadMasterclasses();
   });

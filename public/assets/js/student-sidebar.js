@@ -26,7 +26,7 @@
     { href: '/student-courses.html', label: 'My Courses', icon: I.courses },
     { href: '/student-lessons.html', label: 'My Lessons', icon: I.lessons },
     // { href: '/my-assignments.html',     label: 'Assignments',    icon: I.assignments },
-    { href: '/student-certificates.html', label: 'Certificates', icon: I.certificates },
+    // { href: '/student-certificates.html', label: 'Certificates', icon: I.certificates },
     { href: '/student-course-catalog.html', label: 'Browse Catalog', icon: I.catalog },
     { section: 'Practice & Progress' },
     { href: '/student-practice-log.html', label: 'Practice Log', icon: I.practice },
@@ -37,8 +37,8 @@
     { href: '/student-resources.html', label: 'Resources', icon: I.resources },
     { href: '/student-archive.html', label: 'The Archive', icon: I.archive },
     { section: 'Community' },
-    { href: '/student-messaging.html', label: 'Messages', icon: I.messages },
-    { href: '/discussions.html', label: 'Discussions', icon: I.discussions },
+    // { href: '/student-messaging.html', label: 'Messages', icon: I.messages },
+    // { href: '/discussions.html', label: 'Discussions', icon: I.discussions },
     { href: '/student-notifications.html', label: 'Notifications', icon: I.notifications },
     { section: 'Account' },
     { href: '/student-profile.html', label: 'Profile', icon: I.profile },
@@ -102,7 +102,7 @@
           <div class="sidebar-avatar" id="sb-avatar">${initials}</div>
           <div class="sidebar-user-info">
             <div class="user-name" id="sb-name">${name}</div>
-            <div class="user-role">Student</div>
+            <div class="user-role">Log Out</div>
           </div>
         </div>
       </div>

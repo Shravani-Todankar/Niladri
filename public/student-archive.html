@@ -216,11 +216,7 @@
 
   document.addEventListener('userLoaded', (e) => {
     const user = e.detail;
-    document.getElementById('sb-avatar').textContent = user.avatar_initials || '?';
-    document.getElementById('sb-name').textContent = user.first_name + ' ' + user.last_name;
-    document.getElementById('sb-role').textContent = user.role;
     document.getElementById('topbar-avatar').textContent = user.avatar_initials || '?';
-    document.getElementById('nav-dash').href = user.role === 'instructor' ? '/instructor-dashboard.html' : '/student-dashboard.html';
     loadAll();
   });
 

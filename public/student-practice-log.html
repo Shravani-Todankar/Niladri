@@ -287,7 +287,13 @@
           <!-- Calendar -->
           <div class="card" style="padding:16px; margin-bottom:20px;">
             <div class="cal-header-row">
-              ${['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].map(d => `<div class="cal-day-name">${d}</div>`).join('')}
+              <div class="cal-day-name">Sun</div>
+              <div class="cal-day-name">Mon</div>
+              <div class="cal-day-name">Tue</div>
+              <div class="cal-day-name">Wed</div>
+              <div class="cal-day-name">Thu</div>
+              <div class="cal-day-name">Fri</div>
+              <div class="cal-day-name">Sat</div>
             </div>
             <div class="cal-grid" id="cal-grid"></div>
           </div>
@@ -338,16 +344,23 @@
             <div class="form-group">
               <label class="form-label">Focus Area</label>
               <div class="focus-chips" id="focus-chips">
-                ${['Technique','Sight Reading','Repertoire','Theory','Ear Training','Improvisation'].map(a =>
-                  `<span class="focus-chip" data-value="${a}" onclick="toggleFocus(this)">${a}</span>`
-                ).join('')}
+                <span class="focus-chip" data-value="Technique" onclick="toggleFocus(this)">Technique</span>
+                <span class="focus-chip" data-value="Sight Reading" onclick="toggleFocus(this)">Sight Reading</span>
+                <span class="focus-chip" data-value="Repertoire" onclick="toggleFocus(this)">Repertoire</span>
+                <span class="focus-chip" data-value="Theory" onclick="toggleFocus(this)">Theory</span>
+                <span class="focus-chip" data-value="Ear Training" onclick="toggleFocus(this)">Ear Training</span>
+                <span class="focus-chip" data-value="Improvisation" onclick="toggleFocus(this)">Improvisation</span>
               </div>
             </div>
 
             <div class="form-group">
               <label class="form-label">Quality Rating</label>
               <div class="star-rating" id="star-rating">
-                ${[1,2,3,4,5].map(n => `<span class="star" data-val="${n}" onclick="setRating(${n})">★</span>`).join('')}
+                <span class="star" data-val="1" onclick="setRating(1)">★</span>
+                <span class="star" data-val="2" onclick="setRating(2)">★</span>
+                <span class="star" data-val="3" onclick="setRating(3)">★</span>
+                <span class="star" data-val="4" onclick="setRating(4)">★</span>
+                <span class="star" data-val="5" onclick="setRating(5)">★</span>
               </div>
             </div>
 
@@ -408,8 +421,6 @@
 
   document.addEventListener('userLoaded', (e) => {
     const user = e.detail;
-    document.getElementById('sb-avatar').textContent = user.avatar_initials || (user.first_name[0] + user.last_name[0]);
-    document.getElementById('sb-name').textContent = user.first_name + ' ' + user.last_name;
     document.getElementById('topbar-avatar').textContent = user.avatar_initials || (user.first_name[0] + user.last_name[0]);
     init();
   });
